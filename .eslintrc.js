@@ -14,14 +14,13 @@ module.exports = {
   overrides: [],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: "./tsconfig.json",
-  },
-  parserOptions: {
+    tsconfigRootDir: ".",
+    project: ["./tsconfig.json"],
+    sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: "latest",
-    sourceType: "module",
+    warnOnUnsupportedTypeScriptVersion: true,
   },
   plugins: ["react", "@typescript-eslint"],
   rules: {
