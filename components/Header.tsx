@@ -1,12 +1,12 @@
-import styles from "@/styles";
-import Link from "next/link";
-import { GrCloudlinux } from "react-icons/gr";
-import { SocialIcon } from "react-social-icons";
+import styles from '@/styles';
+import Link from 'next/link';
+import { GrCloudlinux } from 'react-icons/gr';
+import { SocialIcon } from 'react-social-icons';
 
 function Header() {
   return (
     <header
-      className={`sticky top-0 mx-auto flex h-[60px] w-full justify-between text-zinc-800 dark:bg-zinc-800 dark:text-white 2xl:max-w-[1280px]`}
+      className={`${styles.innerWidth} sticky top-0 mx-auto flex h-[60px] w-full justify-between text-zinc-800 dark:bg-zinc-800 dark:text-white 2xl:max-w-[1280px]`}
     >
       <Link
         href="/"
@@ -31,7 +31,7 @@ function Header() {
           Контакты
         </a>
       </div>
-      <div className="items-center flex space-x-2">
+      <div className="flex items-center space-x-2">
         <SocialIcon
           url="https://github.com/MaxShelest88"
           bgColor="black"
