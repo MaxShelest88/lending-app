@@ -1,3 +1,9 @@
+import Header from "@/components/Header";
+
 export default function Home() {
-  return <div>Test</div>;
+  return (
+    <main className="bg-primary-white overflow-hidden">
+      <Header />
+    </main>
+  );
 }

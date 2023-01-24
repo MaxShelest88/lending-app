@@ -4,18 +4,18 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    "airbnb-base",
-    "airbnb-typescript/base",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:eslint-comments/recommended",
     "prettier",
+    "airbnb-typescript",
+    "import",
   ],
   overrides: [],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     tsconfigRootDir: ".",
-    project: ["./tsconfig.json"],
+    project: ["tsconfig.json"],
     sourceType: "module",
     ecmaFeatures: {
       jsx: true,
@@ -28,5 +28,12 @@ module.exports = {
     "@typescript-eslint/no-use-before-define": ["error"],
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "on",
+    "import/no-unresolved": "error",
+  },
+  settings: {
+    "import/resolver": {
+      typescript: {},
+    },
   },
 };
