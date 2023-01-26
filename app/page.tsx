@@ -1,9 +1,7 @@
-import Header from '@/components/Header';
+import { Hero } from '@/sections';
 
-export default function Home() {
-  return (
-    <main className="bg-primary-white overflow-hidden">
-      <Header />
-    </main>
-  );
-}
+const Page = () => {
+  return <Hero />;
+};
+
+export default Page;
