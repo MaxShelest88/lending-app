@@ -1,20 +1,34 @@
 'use client';
 
 import styles from '@/styles';
+import { ChevronDownIcon } from '@heroicons/react/24/solid';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen overflow-hidden pt-[60px]">
-      <div className="container mx-auto flex flex-col gap-1 md:flex-row">
-        <div className="flex flex-[0.75] flex-col gap-[24px]">
-          <h1>Test</h1>
+    <section className="section">
+      <div className="container mx-auto grid md:grid-cols-2">
+        <div className="">
+          <h1 className="text-title">Фронтенд-разработка</h1>
+          <h2 className="text-title font-medium">Максим Шелест</h2>
+          <p className="my-5 max-w-xl text-xl">
+            Разработка пользовательских интерфейсов, современные технологии,
+            результат - все это здесь!
+          </p>
+          <a className="button" href="#">
+            Узнать больше
+          </a>
         </div>
-        <div className={`flex-1 ${styles.flexCenter} relative flex`}>
+        <div className={`${styles.flexCenter} relative`}>
           <img
             src="/myfoto.jpg"
             className="absolute top-0 left-0 z-10 w-full object-cover"
             alt="my foto"
           />
+        </div>
+        <div className="absolute bottom-2 left-1/2 z-10">
+          <a href="#tecnologies">
+            <ChevronDownIcon className="h-7 w-7 text-black" />
+          </a>
         </div>
       </div>
     </section>
