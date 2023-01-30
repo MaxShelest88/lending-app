@@ -9,7 +9,7 @@ interface Props {
 
 function Header({ socialIcons }: Props) {
   return (
-    <header className="sticky z-50 mx-auto w-full bg-slate-50 text-zinc-800 dark:bg-zinc-800 dark:text-white">
+    <header className="sticky top-0 z-50 mx-auto w-full bg-slate-50 text-zinc-800 dark:bg-zinc-800 dark:text-white">
       <div className=" container mx-auto flex h-[60px] justify-between">
         <Link
           href="/"
@@ -38,6 +38,7 @@ function Header({ socialIcons }: Props) {
           {socialIcons.map((icon) => (
             <SocialIcon
               url={icon.url}
+              key={icon._id}
               bgColor="black"
               fgColor="white"
               style={{ width: 30, height: 30 }}

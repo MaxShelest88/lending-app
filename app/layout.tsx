@@ -1,13 +1,16 @@
 import '../styles/globals.css';
-import { fetchSocialIcons } from '@/utils/fetchSocialIcons';
 import { Header, Providers } from '@/components';
+import { fetchFromSanity } from '@/utils/fetchFromSanity';
 
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const socialIcons = await fetchSocialIcons();
+  const socialIcons = await fetchFromSanity<SocialIcon[]>(`
+  *[_type=="socialIcons"]{
+  		_id, name, url
+	}`);
   return (
     <html lang="en">
       <head />

@@ -3,10 +3,10 @@
 import styles from '@/styles';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <section className="section">
-      <div className="container mx-auto grid md:grid-cols-2">
+      <div className="container mx-auto grid md:grid-cols-2 ">
         <div className="">
           <h1 className="text-title">Фронтенд-разработка</h1>
           <h2 className="text-title font-medium">Максим Шелест</h2>
