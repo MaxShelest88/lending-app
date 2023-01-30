@@ -9,7 +9,7 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:eslint-comments/recommended',
-    'prettier',
+    'plugin:prettier/recommended',
     'airbnb-typescript',
   ],
   overrides: [],
