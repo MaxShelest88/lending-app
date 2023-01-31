@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
           />
         </div>
         <div className="absolute bottom-2 left-1/2 z-10">
-          <a href="#tecnologies">
+          <a href="#technologies">
             <ChevronDownIcon className="h-7 w-7 text-black" />
           </a>
         </div>

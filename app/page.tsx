@@ -1,4 +1,4 @@
-import { Hero, Technologies } from '@/sections';
+import { Contacts, Hero, Projects, Technologies } from '@/sections';
 import { fetchFromSanity } from '@/utils/fetchFromSanity';
 
 const Page = async () => {
@@ -7,10 +7,25 @@ const Page = async () => {
   _id, title, color, description, stacks[] ->
    {_id, mainImage, skill, title}}`,
   );
+
+  const projects = await fetchFromSanity<Project[]>(
+    `*[_type=="Project"]{
+  _id, title, url, difficulty, mainImage, stacks[] ->
+   {_id, mainImage, skill, title}
+}`,
+  );
+
+  const socialIcons = await fetchFromSanity<SocialIcon[]>(`
+  *[_type=="socialIcons"]{
+  		_id, name, url
+	}`);
+
   return (
     <>
       <Hero />
       <Technologies categories={categories} />
+      <Projects projects={projects} />
+      <Contacts socialIcons={socialIcons} />
     </>
   );
 };

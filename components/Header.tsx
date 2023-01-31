@@ -21,16 +21,16 @@ function Header({ socialIcons }: Props) {
           </span>
         </Link>
         <div className="hidden space-x-5 sm:flex sm:items-center">
-          <a href="#about" className="text-xl font-light">
-            Обо мне
-          </a>
           <a href="#technologies" className="text-xl font-light">
             Технологии
+          </a>
+          <a href="#about" className="text-xl font-light">
+            Обо мне
           </a>
           <a href="#projects" className="text-xl font-light">
             Проекты
           </a>
-          <a href="#contact" className="text-xl font-light">
+          <a href="#contacts" className="text-xl font-light">
             Контакты
           </a>
         </div>

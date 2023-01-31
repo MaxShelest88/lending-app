@@ -1,3 +1,5 @@
+'use client';
+
 import { urlFor } from '@/lib/sanity';
 import Image from 'next/image';
 
@@ -7,7 +9,7 @@ interface Props {
 
 const Technologies: React.FC<Props> = ({ categories }) => {
   return (
-    <section className="section">
+    <section className="section p-5 sm:p-10" id="technologies">
       <div className="container mx-auto">
         <h1 className="text-title py-10">Технологии</h1>
         <p className="w-72 text-lg font-light">
@@ -34,7 +36,7 @@ const Technologies: React.FC<Props> = ({ categories }) => {
                 <div>
                   <p className="self-start pt-3 pb-1 font-semibold">
                     <span className={`text${category.color}-500`}>
-                      {category.title}
+                      {`Технологии ${category.title}`}
                     </span>
                   </p>
                   <div className="flex items-center space-x-4">
