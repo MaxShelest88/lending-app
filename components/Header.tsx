@@ -11,7 +11,7 @@ interface Props {
 function Header({ socialIcons }: Props) {
   return (
     <header className="sticky top-0 z-50 mx-auto w-full bg-slate-50 text-zinc-800 dark:bg-zinc-800 dark:text-white">
-      <div className=" container mx-auto flex h-[60px] justify-between">
+      <div className="container mx-auto flex h-[60px] justify-between px-5 lg:px-0">
         <a
           href="/"
           className="tracking-widset flex items-center space-x-1 text-lg font-light"
