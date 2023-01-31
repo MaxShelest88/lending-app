@@ -13,10 +13,10 @@ const Contacts: React.FC<Props> = ({ socialIcons }) => {
       <div className="container mx-auto">
         <h1 className="text-title py-10">Контакты</h1>
         <div className="grid md:grid-cols-2">
-          <div className="flex flex-col space-y-3">
+          <div className="space-y-5">
             {socialIcons.map((icon) => (
-              <div className="text-xl font-light" key={icon._id}>
-                <p>{icon.name}: </p>
+              <div className="flex space-x-3" key={icon._id}>
+                <p className="text-xl font-light">{icon.name}: </p>
                 <SocialIcon
                   url={icon.url}
                   key={icon._id}

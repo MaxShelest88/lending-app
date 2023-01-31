@@ -8,12 +8,14 @@ const ContactForm = () => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = () => {};
+  const handleSubmit = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+  };
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col rounded-lg bg-white px-8 py-8 shadow-xl dark:bg-blue-500"
+      className="flex flex-col rounded-lg bg-white px-8 py-8 shadow-xl dark:bg-slate-800"
     >
       <h1 className="text-2xl font-bold dark:text-gray-50">
         Отправить мне сообщение
@@ -23,7 +25,7 @@ const ContactForm = () => {
         htmlFor="fullname"
         className="mt-8 font-light text-gray-500 dark:text-gray-50"
       >
-        ФИО<span className="text-red-500 dark:text-gray-50">*</span>
+        ФИО<span className="text-red-500">*</span>
       </label>
       <input
         type="text"
@@ -32,7 +34,7 @@ const ContactForm = () => {
           setFullname(e.target.value);
         }}
         name="fullname"
-        className="border-b bg-transparent py-2 pl-4 font-light text-gray-500 ring-green-500 focus:rounded-md focus:outline-none focus:ring-1"
+        className="border-b bg-transparent py-2 pl-4 font-light text-sky-700 ring-blue-500 focus:rounded-md focus:outline-none focus:ring-1"
       />
 
       <label
@@ -48,7 +50,7 @@ const ContactForm = () => {
         onChange={(e) => {
           setEmail(e.target.value);
         }}
-        className="border-b bg-transparent py-2 pl-4 font-light text-gray-500 ring-green-500 focus:rounded-md focus:outline-none focus:ring-1"
+        className="border-b bg-transparent py-2 pl-4 font-light text-gray-500 ring-sky-700 focus:rounded-md focus:outline-none focus:ring-1"
       />
 
       <label
@@ -64,7 +66,7 @@ const ContactForm = () => {
         onChange={(e) => {
           setSubject(e.target.value);
         }}
-        className="border-b bg-transparent py-2 pl-4 font-light text-gray-500 ring-green-500 focus:rounded-md focus:outline-none focus:ring-1"
+        className="border-b bg-transparent py-2 pl-4 font-light text-gray-500 ring-sky-700 focus:rounded-md focus:outline-none focus:ring-1"
       />
 
       <label
@@ -79,7 +81,7 @@ const ContactForm = () => {
         onChange={(e) => {
           setMessage(e.target.value);
         }}
-        className="border-b bg-transparent py-2 pl-4 font-light text-gray-500 ring-green-500 focus:rounded-md focus:outline-none focus:ring-1"
+        className="border-b bg-transparent py-2 pl-4 font-light text-gray-500 ring-sky-700 focus:rounded-md focus:outline-none focus:ring-1"
       ></textarea>
 
       <div className="flex flex-row items-center justify-start">

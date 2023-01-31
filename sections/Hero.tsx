@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
             Разработка пользовательских интерфейсов, современные технологии,
             результат - все это здесь!
           </p>
-          <a className="button" href="#">
+          <a className="button" href="#contacts">
             Узнать больше
           </a>
         </div>

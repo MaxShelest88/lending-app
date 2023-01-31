@@ -1,4 +1,5 @@
-import Link from 'next/link';
+'use client';
+
 import { GrCloudlinux } from 'react-icons/gr';
 import { SocialIcon } from 'react-social-icons';
 import DarkModeButton from './DarkModeButton';
@@ -11,7 +12,7 @@ function Header({ socialIcons }: Props) {
   return (
     <header className="sticky top-0 z-50 mx-auto w-full bg-slate-50 text-zinc-800 dark:bg-zinc-800 dark:text-white">
       <div className=" container mx-auto flex h-[60px] justify-between">
-        <Link
+        <a
           href="/"
           className="tracking-widset flex items-center space-x-1 text-lg font-light"
         >
@@ -19,7 +20,7 @@ function Header({ socialIcons }: Props) {
           <span>
             <GrCloudlinux className="h-4 w-4" />
           </span>
-        </Link>
+        </a>
         <div className="hidden space-x-5 sm:flex sm:items-center">
           <a href="#technologies" className="text-xl font-light">
             Технологии
