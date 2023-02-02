@@ -60,7 +60,7 @@ const ContactForm = () => {
         errors={errors}
       />
       <label
-        htmlFor="message"
+        htmlFor="textMessage"
         className="mt-4 font-light text-gray-500 dark:text-gray-50"
       >
         Сообщение<span className="text-red-500">*</span>
@@ -68,9 +68,15 @@ const ContactForm = () => {
       <textarea
         id="message"
         maxLength={1000}
-        {...register('message', { required: 'введите email', max: 1000 })}
-        className="border-b bg-transparent py-2 pl-4 font-light text-gray-500 ring-sky-700 focus:rounded-md focus:outline-none focus:ring-1"
+        {...register('message', {
+          required: 'Поле не должно быть пустым',
+          max: 1000,
+        })}
+        className="border-b bg-transparent pt-2 pl-4 font-light text-gray-500 ring-sky-700 focus:rounded-md focus:outline-none focus:ring-1"
       ></textarea>
+      <div className="h-2 text-red-500">
+        {errors?.message && (errors?.message?.message?.toString() || 'Ошибка')}
+      </div>
 
       <div className="flex flex-row items-center justify-start">
         <button type="submit" className="button">

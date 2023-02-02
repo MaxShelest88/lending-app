@@ -28,16 +28,13 @@ const Input: React.FC<InputProps> = ({
       </label>
       <input
         id={name}
-        className="border-b bg-transparent py-2 pl-4 font-light text-sky-700 ring-blue-500 focus:rounded-md focus:outline-none focus:ring-1"
+        className="border-b bg-transparent pt-2 pl-4 font-light text-sky-700 ring-blue-500 focus:rounded-md focus:outline-none focus:ring-1"
         {...register(name, { ...options })}
         {...rest}
       />
-      {errors?.[name] && (
-        <div className="text-red-500">
-          {errors?.[name]?.message?.toString() ||
-            'Проверьте правильность ввода'}
-        </div>
-      )}
+      <div className="h-2 text-red-500">
+        {errors?.[name] && (errors?.[name]?.message?.toString() || 'Ошибка')}
+      </div>
     </>
   );
 };
