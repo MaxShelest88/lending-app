@@ -29,7 +29,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "lib/sanity.js"
+    "/lib",
+    "hooks/useInput.ts"
   ],
   "exclude": ["node_modules"]
 }

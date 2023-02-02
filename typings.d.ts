@@ -35,3 +35,10 @@ interface Project {
   mainImage: Image;
   stacks: Stack[];
 }
+
+interface ContactData {
+  fullName: string;
+  email: string;
+  subject: string;
+  message: string;
+}
