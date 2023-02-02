@@ -33,6 +33,14 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'import/no-unresolved': 'error',
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
+    '@typescript-eslint/no-misused-promises': [
+      2,
+      {
+        checksVoidReturn: {
+          attributes: false,
+        },
+      },
+    ],
   },
   settings: {
     'import/resolver': {
