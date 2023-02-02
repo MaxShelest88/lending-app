@@ -21,7 +21,8 @@ const ContactForm = () => {
 
   return (
     <form
-      onSubmit={() => handleSubmit(onSubmit)}
+      // eslint-disable-next-line @typescript-eslint/no-misused-promises
+      onSubmit={handleSubmit(onSubmit)}
       className="flex flex-col rounded-lg bg-white px-8 py-8 shadow-xl dark:bg-slate-800"
     >
       <h1 className="text-2xl font-bold dark:text-gray-50">

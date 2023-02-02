@@ -10,6 +10,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:eslint-comments/recommended',
     'plugin:prettier/recommended',
+    'plugin:react-hook-form/recommended',
     'airbnb-typescript',
     'prettier',
   ],
@@ -24,7 +25,7 @@ module.exports = {
     },
     warnOnUnsupportedTypeScriptVersion: true,
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'react-hook-form'],
   rules: {
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
