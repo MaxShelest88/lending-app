@@ -1,39 +1,4 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { mailOptions, transporter } from '../../config/nodemailer';
-
-type Data = {
-  message?: unknown;
-  success?: boolean;
-};
-
-const CONTACT_MESSAGE_FIELDS = {
-  fullName: 'Имя',
-  email: 'Email',
-  subject: 'Тема',
-  message: 'Сообщение',
-};
-
-const generateEmailContent = (data: ContactData) => {
-  const stringData = Object.entries(data).reduce(
-    (str, [key, val]) =>
-      (str += `${CONTACT_MESSAGE_FIELDS[key as keyof ContactData]}: \n${
-        val as keyof ContactData
-      } \n\n`),
-    '',
-  );
-
-  const htmlData = Object.entries(data).reduce(
-    (str, [key, val]) =>
-      (str += `<h1 class="form-heading" aligh="left">${
-        CONTACT_MESSAGE_FIELDS[key as keyof ContactData]
-      }</h1><p class="form-answer">${val as keyof ContactData}</p>`),
-    '',
-  );
-
-  return {
-    text: stringData,
-    html: `<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title></title>
@@ -79,7 +44,7 @@ const generateEmailContent = (data: ContactData) => {
       }
       .form-heading {
         color: #2a2a2a;
-        font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
         font-weight: 400;
         text-align: left;
         line-height: 20px;
@@ -89,7 +54,7 @@ const generateEmailContent = (data: ContactData) => {
       }
       .form-answer {
         color: #2a2a2a;
-        font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
         font-weight: 300;
         text-align: left;
         line-height: 20px;
@@ -97,7 +62,7 @@ const generateEmailContent = (data: ContactData) => {
         margin: 0 0 24px;
         padding: 0;
       }
-      div[style*="margin: 16px 0;"] {
+      div[style*='margin: 16px 0;'] {
         margin: 0 !important;
       }
     </style>
@@ -167,30 +132,4 @@ const generateEmailContent = (data: ContactData) => {
       </tr>
     </table>
   </body>
-</html>`,
-  };
-};
-
-const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
-  const data = req.body as ContactData;
-  if (req.method == 'POST') {
-    if (!data.fullName && !data.email && !data.subject && !data.message) {
-      res.status(400).json({ message: 'Bad request' });
-    }
-  }
-
-  try {
-    await transporter.sendMail({
-      ...mailOptions,
-      ...generateEmailContent(data),
-      subject: data.subject,
-    });
-    return res.status(200).json({ success: true });
-  } catch (err) {
-    console.log(err);
-    res.status(400).json({ message: err });
-  }
-  //   res.status(400).json({ message: 'Bad request' });
-};
-
-export default handler;
+</html>

@@ -15,7 +15,10 @@ const ContactForm = () => {
   });
 
   const onSubmit: SubmitHandler<ContactData> = async (data) => {
-    await sendContactForm(data);
+    try {
+      await sendContactForm(data);
+    } catch (err) {}
+
     reset();
   };
 
@@ -27,6 +30,7 @@ const ContactForm = () => {
       <h1 className="text-2xl font-bold dark:text-gray-50">
         Отправить мне сообщение
       </h1>
+      <div className="h-2 text-red-500"></div>
       <Input
         label="ФИО"
         type="text"

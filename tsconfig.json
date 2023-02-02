@@ -30,7 +30,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "/lib",
-    "hooks/useInput.ts"
+    "hooks/useInput.ts",
+    "/config"
   ],
   "exclude": ["node_modules"]
 }
