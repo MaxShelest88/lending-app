@@ -1,7 +1,7 @@
 'use client';
 
 import styles from '@/styles';
-import { CgChevronDoubleDownO } from 'react-icons/cg';
+import { BsMouse } from 'react-icons/bs';
 
 const Hero: React.FC = () => {
   return (
@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
         </div>
         <div className="absolute bottom-2 left-0 z-10 animate-bounce">
           <a href="#technologies">
-            <CgChevronDoubleDownO className="h-9 w-9 text-sky-500" />
+            <BsMouse className="h-9 w-9 text-black" />
           </a>
         </div>
       </div>
