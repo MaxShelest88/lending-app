@@ -1,4 +1,4 @@
-import { Contacts, Hero, Projects, Technologies } from '@/sections';
+import { About, Contacts, Hero, Projects, Technologies } from '@/sections';
 import { fetchFromSanity } from '@/utils/fetchFromSanity';
 
 const Page = async () => {
@@ -24,6 +24,7 @@ const Page = async () => {
     <>
       <Hero />
       <Technologies categories={categories} />
+      <About />
       <Projects projects={projects} />
       <Contacts socialIcons={socialIcons} />
     </>

@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import { Header, Providers } from '@/components';
+import { Footer, Header, Providers } from '@/components';
 import { fetchFromSanity } from '@/utils/fetchFromSanity';
 
 export default async function RootLayout({
@@ -20,6 +20,7 @@ export default async function RootLayout({
           <main className="bg-primary-white overflow-hidden overflow-y-scroll text-zinc-900 scrollbar-hide dark:bg-zinc-900 dark:text-white">
             {children}
           </main>
+          <Footer />
         </Providers>
       </body>
     </html>

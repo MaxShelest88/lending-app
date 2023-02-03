@@ -11,7 +11,7 @@ const Contacts: React.FC<Props> = ({ socialIcons }) => {
   return (
     <section className="section p-5 sm:p-10" id="contacts">
       <div className="container mx-auto">
-        <h1 className="text-title py-10">Контакты</h1>
+        <h1 className="text-title pb-10">Контакты</h1>
         <div className="grid md:grid-cols-2">
           <div className="space-y-5">
             {socialIcons.map((icon) => (

@@ -12,13 +12,13 @@ const Hero: React.FC = () => {
           <h2 className="text-title font-medium">Максим Шелест</h2>
           <p className="my-5 max-w-xl text-xl">
             Разработка пользовательских интерфейсов, современные технологии,
-            результат - все это здесь!
+            результат.
           </p>
           <a className="button" href="#contacts">
             Узнать больше
           </a>
         </div>
-        <div className={`${styles.flexCenter} relative`}>
+        <div className={`${styles.flexCenter} m-h-[400px] relative`}>
           <img
             src="/myfoto.jpg"
             className="absolute top-0 left-0 z-10 w-full object-cover"
