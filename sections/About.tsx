@@ -3,7 +3,7 @@ import Section from '@/components/UI/Section';
 const About = () => {
   return (
     <Section id="about" title="Обо мне">
-      <div className=" items-center justify-between xl:flex">
+      <div className="flex flex-col-reverse items-center justify-between md:flex-row">
         <div className="flex-[40%] grow-0">
           <p className="text-lg font-light">
             Мне 34. За плечами 10-летний опыт работы системным администратором в

@@ -1,6 +1,6 @@
 import Header from './Header';
 import Footer from './Footer';
-import DarkModeButton from './DarkModeButton';
+import DarkModeButton from './UI/DarkModeButton';
 import Providers from './Providers';
 import ContactForm from './ContactForm';
 
