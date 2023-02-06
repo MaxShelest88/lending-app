@@ -4,7 +4,7 @@ const About = () => {
   return (
     <Section id="about" title="Обо мне">
       <div className="flex flex-col-reverse items-center justify-between md:flex-row">
-        <div className="flex-[40%] grow-0">
+        <div className="relative flex-[40%] grow-0">
           <p className="text-lg font-light">
             Мне 34. За плечами 10-летний опыт работы системным администратором в
             сфере информационных технологий. Сейчас проникся страстью к
@@ -16,7 +16,7 @@ const About = () => {
         <div className="flex justify-center">
           <div className="relative h-[400px] w-[400px] items-center justify-center overflow-hidden rounded-full">
             <img
-              className="absolute h-full w-full object-cover object-center"
+              className="absolute h-full w-full object-cover"
               src="/about.jpg"
               alt="my foto"
             />

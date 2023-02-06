@@ -11,12 +11,12 @@ const Technologies: React.FC<Props> = ({ categories }) => {
   return (
     <section className="section p-5 sm:p-10" id="technologies">
       <div className="container mx-auto">
-        <h1 className="text-title py-10">Технологии</h1>
-        <p className="w-72 text-lg font-light">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut
-          exercitationem doloremque laboriosam deserunt quod, eaque impedit
-          provident perspiciatis nulla vitae aut! Architecto, distinctio
-          deserunt aspernatur et ea animi dolor molestias?
+        <h1 className="text-title py-10">Skills / Навыки</h1>
+        <p className="max-w-xl text-lg font-light">
+          Имею опыт работы c HTML, CSS, JavaScript, CSS-фреймворках (Tailwind
+          CSS), библиотеке JavaScript React и инструментми разработки Git. Я
+          использую эти технологии для создания высококачественных, отзывчивых и
+          интерактивных веб-приложений.
         </p>
         <div className="flex w-full space-x-5 overflow-x-scroll py-5 scrollbar-hide">
           {categories.map((category) => (

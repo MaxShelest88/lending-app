@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   return (
     <section className="section">
       <div className="container relative mx-auto h-full px-5 md:grid md:grid-cols-2 lg:px-0">
-        <div className="pt-[200px]">
+        <div className="relative pt-[200px]">
           <h1 className="text-title">Фронтенд-разработка</h1>
           <h2 className="text-title font-medium">Максим Шелест</h2>
           <p className="my-5 max-w-xl text-xl">
