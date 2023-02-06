@@ -3,21 +3,33 @@
 @tailwind utilities;
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Eudoxus Sans', sans-serif;
-  scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Eudoxus Sans", sans-serif;
+	scroll-behavior: smooth;
 }
 
 @layer components {
-  .section {
-    @apply w-full overflow-hidden md:h-[calc(100vh-60px)];
-  }
-  .text-title {
-    @apply bg-clip-text text-5xl font-bold text-transparent text-sky-500;
-  }
-  .button {
-    @apply mt-8 inline-flex max-w-xs flex-row items-center rounded-md bg-sky-500 py-2 px-5 text-center text-lg font-light text-white hover:bg-sky-400;
-  }
+	.section {
+		@apply w-full overflow-hidden sm:h-[calc(100vh-60px)];
+	}
+	.text-title {
+		@apply bg-clip-text text-5xl font-bold text-transparent text-sky-500;
+	}
+	.button {
+		@apply mt-8 inline-flex max-w-xs flex-row items-center rounded-md bg-sky-500 py-2 px-5 text-center text-lg font-light text-white hover:bg-sky-400;
+	}
+
+	.mark-text {
+		@apply outline-none bg-transparent relative inline-block text-5xl leading-[normal] font-bold text-white no-underline whitespace-nowrap m-0 p-0;
+	}
+
+	.span-text {
+		@apply relative z-[1] inline-block pointer-events-none px-[0.1em] py-0;
+	}
+
+	.svg-text {
+		@apply absolute top-[-10%] left-[-10%] right-[-10%] bottom-[-10%] z-[-1] overflow-hidden fill-none stroke-[54px] pointer-events-none m-auto p-0 w-[105.5%] h-[104%] skew-x-[-20deg];
+	}
 }

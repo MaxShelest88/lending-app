@@ -23,10 +23,10 @@ function Header({ socialIcons }: Props) {
         </a>
         <div className="hidden space-x-5 sm:items-center md:flex">
           <a
-            href="#technologies"
+            href="#skills"
             className="rounded-lg p-2 text-xl font-light hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
           >
-            Технологии
+            Навыки
           </a>
           <a
             href="#about"
