@@ -18,7 +18,7 @@ interface Props {
 
 function Header({ socialIcons }: Props) {
   return (
-    <header className="sticky top-0 z-50 mx-auto w-full bg-slate-50 text-zinc-800 shadow-md dark:bg-zinc-800 dark:text-white">
+    <header className="fixed top-0 z-50 mx-auto w-full bg-slate-50 text-zinc-800 shadow-md dark:bg-zinc-800 dark:text-white">
       <div className="container mx-auto flex h-[60px] justify-between px-5 lg:px-0 ">
         <a
           href="/"
@@ -29,14 +29,15 @@ function Header({ socialIcons }: Props) {
             <DiAtom className="h-5 w-5" />
           </span>
         </a>
-        <div className="hidden space-x-5 sm:items-center md:flex">
+        <div className="hidden space-x-5 sm:items-center lg:flex">
           {MENU_ITEMS.map((item) => (
             <Link
               activeClass="active"
               to={item.id}
               spy={true}
+              hashSpy={true}
               smooth={true}
-              offset={-59}
+              offset={-5}
               duration={500}
               key={item.id}
               className="cursor-pointer rounded-lg p-2 text-xl font-light transition-all hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"

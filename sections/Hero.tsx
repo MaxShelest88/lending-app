@@ -2,10 +2,11 @@
 
 import styles from '@/styles';
 import { BsMouse } from 'react-icons/bs';
+import { Link } from 'react-scroll';
 
 const Hero: React.FC = () => {
   return (
-    <section className="section">
+    <section className="section pt-[60px]">
       <div className="container relative mx-auto h-full overflow-hidden md:grid md:grid-cols-2">
         <div className="relative py-10 px-5 xl:py-[200px]">
           <h1 className="text-title">
@@ -47,9 +48,16 @@ const Hero: React.FC = () => {
           />
         </div>
         <div className="absolute bottom-2 left-0 z-10 hidden animate-bounce xl:block">
-          <a href="#skills">
+          <Link
+            to="skills"
+            spy={true}
+            smooth={true}
+            offset={-5}
+            duration={500}
+            className="cursor-pointer"
+          >
             <BsMouse className="h-9 w-9 text-black dark:text-white" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

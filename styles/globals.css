@@ -11,7 +11,7 @@
 
 @layer components {
 	.section {
-		@apply w-full lg:h-[calc(100vh-60px)];
+		@apply w-screen lg:h-screen;
 	}
 	.text-title {
 		@apply bg-clip-text text-5xl font-bold text-transparent text-sky-500;
