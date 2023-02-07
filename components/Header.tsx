@@ -40,7 +40,8 @@ function Header({ socialIcons }: Props) {
               offset={-5}
               duration={500}
               key={item.id}
-              className="cursor-pointer rounded-lg p-2 text-xl font-light transition-all hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+              spyThrottle={500}
+              className="cursor-pointer rounded-lg p-2 text-xl font-light transition-all hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
             >
               {item.name}
             </Link>

@@ -6,8 +6,8 @@ import { Link } from 'react-scroll';
 
 const Hero: React.FC = () => {
   return (
-    <section className="section pt-[60px]">
-      <div className="container relative mx-auto h-full overflow-hidden md:grid md:grid-cols-2">
+    <section className="section overflow-hidden pt-[60px]">
+      <div className="container relative mx-auto h-full md:grid md:grid-cols-2">
         <div className="relative py-10 px-5 xl:py-[200px]">
           <h1 className="text-title">
             <mark className="mark-text">
@@ -38,12 +38,10 @@ const Hero: React.FC = () => {
             </a>
           </div>
         </div>
-        <div
-          className={`${styles.flexCenter} m-h-[400px] relative overflow-hidden`}
-        >
+        <div className={`${styles.flexCenter} m-h-[400px] hidden md:flex`}>
           <img
             src="/myfoto.jpg"
-            className="absolute top-0 left-0 w-full object-cover"
+            className="mr-[calc(-50vw+90%)] w-full max-w-[100vw] object-cover"
             alt="my foto"
           />
         </div>
