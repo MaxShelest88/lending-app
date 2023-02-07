@@ -3,6 +3,14 @@
 import { DiAtom } from 'react-icons/di';
 import { SocialIcon } from 'react-social-icons';
 import DarkModeButton from './UI/DarkModeButton';
+import { Link } from 'react-scroll/modules';
+
+const MENU_ITEMS = [
+  { name: 'Навыки', id: 'skills' },
+  { name: 'Обо мне', id: 'about' },
+  { name: 'Проекты', id: 'projects' },
+  { name: 'Контакты', id: 'contacts' },
+];
 
 interface Props {
   socialIcons: SocialIcon[];
@@ -22,30 +30,20 @@ function Header({ socialIcons }: Props) {
           </span>
         </a>
         <div className="hidden space-x-5 sm:items-center md:flex">
-          <a
-            href="#skills"
-            className="rounded-lg p-2 text-xl font-light transition-all hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-          >
-            Навыки
-          </a>
-          <a
-            href="#about"
-            className="rounded-lg p-2 text-xl font-light transition-all hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-          >
-            Обо мне
-          </a>
-          <a
-            href="#projects"
-            className="rounded-lg p-2 text-xl font-light transition-all hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-          >
-            Проекты
-          </a>
-          <a
-            href="#contacts"
-            className="rounded-lg p-2 text-xl font-light transition-all hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-          >
-            Контакты
-          </a>
+          {MENU_ITEMS.map((item) => (
+            <Link
+              activeClass="active"
+              to={item.id}
+              spy={true}
+              smooth={true}
+              offset={-59}
+              duration={500}
+              key={item.id}
+              className="cursor-pointer rounded-lg p-2 text-xl font-light transition-all hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
         <div className="flex items-center space-x-2">
           {socialIcons.map((icon) => (

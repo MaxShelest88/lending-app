@@ -7,7 +7,6 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Eudoxus Sans", sans-serif;
-	scroll-behavior: smooth;
 }
 
 @layer components {
@@ -18,7 +17,7 @@
 		@apply bg-clip-text text-5xl font-bold text-transparent text-sky-500;
 	}
 	.button {
-		@apply mt-8 inline-flex max-w-xs flex-row items-center rounded-md bg-sky-500 py-2 px-5 text-center transition-all text-lg font-light text-white hover:bg-sky-400;
+		@apply mt-8 inline-flex max-w-xs flex-row items-center rounded-md bg-sky-500 py-2 px-5 text-center text-lg font-light text-white transition-all hover:bg-sky-400;
 	}
 
 	.mark-text {
@@ -31,5 +30,8 @@
 
 	.svg-text {
 		@apply pointer-events-none absolute top-[-10%] left-[-10%] right-[-10%] bottom-[-10%] z-[-1] m-auto h-[104%] w-[105.5%] skew-x-[-20deg] overflow-hidden fill-none stroke-[54px] p-0;
+	}
+	.active {
+		@apply text-sky-500;
 	}
 }

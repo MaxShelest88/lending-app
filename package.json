@@ -34,10 +34,12 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.0",
     "react-icons": "^4.7.1",
+    "react-scroll": "^1.8.9",
     "react-social-icons": "^5.15.0",
     "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
+    "@types/react-scroll": "^1.8.6",
     "@typescript-eslint/eslint-plugin": "^5.48.2",
     "@typescript-eslint/parser": "^5.49.0",
     "autoprefixer": "^10.4.13",
