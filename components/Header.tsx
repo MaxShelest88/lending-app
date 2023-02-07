@@ -24,25 +24,25 @@ function Header({ socialIcons }: Props) {
         <div className="hidden space-x-5 sm:items-center md:flex">
           <a
             href="#skills"
-            className="rounded-lg p-2 text-xl font-light hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+            className="rounded-lg p-2 text-xl font-light transition-all hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
           >
             Навыки
           </a>
           <a
             href="#about"
-            className="rounded-lg p-2 text-xl font-light hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+            className="rounded-lg p-2 text-xl font-light transition-all hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
           >
             Обо мне
           </a>
           <a
             href="#projects"
-            className="rounded-lg p-2 text-xl font-light hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+            className="rounded-lg p-2 text-xl font-light transition-all hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
           >
             Проекты
           </a>
           <a
             href="#contacts"
-            className="rounded-lg p-2 text-xl font-light hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+            className="rounded-lg p-2 text-xl font-light transition-all hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
           >
             Контакты
           </a>
@@ -55,6 +55,7 @@ function Header({ socialIcons }: Props) {
               bgColor="#0ea5e9"
               fgColor="white"
               style={{ width: 30, height: 30 }}
+              className="transition-all hover:translate-y-1"
             />
           ))}
           <DarkModeButton />

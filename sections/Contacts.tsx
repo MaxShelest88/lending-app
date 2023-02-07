@@ -19,7 +19,7 @@ const Contacts: React.FC<Props> = ({ socialIcons }) => {
               <SocialIcon
                 url={icon.url}
                 key={icon._id}
-                bgColor="black"
+                bgColor="#0ea5e9"
                 fgColor="white"
                 style={{ width: 30, height: 30 }}
               />

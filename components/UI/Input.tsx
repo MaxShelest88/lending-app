@@ -30,7 +30,7 @@ const Input: React.FC<InputProps> = ({
       </label>
       <input
         id={name}
-        className="border-b bg-transparent pt-2 pl-4 font-light text-sky-700 ring-blue-500 focus:rounded-md focus:outline-none focus:ring-1"
+        className="border-b bg-transparent pt-2 pl-4 font-light ring-sky-500 focus:rounded-md focus:outline-none focus:ring-1"
         {...register(name, { ...options })}
         {...rest}
       />

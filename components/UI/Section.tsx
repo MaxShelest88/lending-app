@@ -9,9 +9,9 @@ interface Props {
 const Section: React.FC<Props> = ({ id, title, children }) => {
   return (
     <>
-      <section className="section p-5 sm:p-10" id={id}>
+      <section className="section p-5" id={id}>
         <div className="container mx-auto">
-          <h1 className="text-title py-10">{title}</h1>
+          <h1 className="text-title mb-10">{title}</h1>
           {children}
         </div>
       </section>

@@ -4,7 +4,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import Input from './UI/Input';
 import { sendContactForm } from '../lib/contact';
 
-const ContactForm = () => {
+const ContactForm: React.FC = () => {
   const {
     register,
     handleSubmit,
@@ -25,7 +25,7 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col rounded-lg bg-white px-8 py-8 shadow-xl dark:bg-slate-800"
+      className="flex flex-col rounded-xl bg-white px-8 py-8 shadow-md dark:bg-slate-800"
     >
       <h1 className="text-2xl font-bold dark:text-gray-50">
         Связаться со мной
@@ -73,10 +73,10 @@ const ContactForm = () => {
         id="message"
         maxLength={1000}
         {...register('message', {
-          required: 'Поле не должно быть пустым',
+          required: 'поле не должно быть пустым',
           max: 1000,
         })}
-        className="border-b bg-transparent pt-2 pl-4 font-light text-gray-500 ring-sky-700 focus:rounded-md focus:outline-none focus:ring-1"
+        className="border-b bg-transparent pt-2 pl-4 font-light text-gray-500 ring-sky-500 focus:rounded-md focus:outline-none focus:ring-1"
       ></textarea>
       <div className="h-2 text-red-500">
         {errors?.message && (errors?.message?.message?.toString() || 'Ошибка')}
