@@ -1,14 +1,20 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import styles from '@/styles';
+import { textVariant } from '@/utils/motion';
 
 const Hero: React.FC = () => {
   return (
-    <section className="section relative overflow-hidden xl:h-[calc(100vh-60px)]">
+    <motion.section
+      initial="hidden"
+      whileInView="show"
+      className="section relative overflow-hidden xl:h-[calc(100vh-60px)]"
+    >
       <div className="container relative mx-auto h-full md:grid md:grid-cols-2">
         <div className="relative overflow-hidden px-5 pt-[80px] xl:py-[200px]">
-          <div className="relative ">
-            <div className="relative z-20">
+          <div className="relative z-20">
+            <motion.div variants={textVariant(1)}>
               <h1 className="text-title">
                 <mark className="mark-text">
                   <span className="span-text">Frontend</span>
@@ -25,19 +31,21 @@ const Hero: React.FC = () => {
                 - разработка
               </h1>
               <h2 className="text-title mb-5">Максим Шелест</h2>
+            </motion.div>
+            <motion.div variants={textVariant(2)}>
               <p className="mb-5 max-w-xl text-xl">
                 Разработка пользовательских интерфейсов, современные технологии,
                 результат.
               </p>
-              <div className="flex gap-2">
-                <a className="button" href="#contacts">
-                  Связаться со мной
-                </a>
-                <a className="button" href="resume.pdf">
-                  Скачать резюме
-                </a>
-              </div>
-            </div>
+            </motion.div>
+            <motion.div variants={textVariant(3)} className="flex gap-2">
+              <a className="button" href="#contacts">
+                Связаться со мной
+              </a>
+              <a className="button" href="resume.pdf">
+                Скачать резюме
+              </a>
+            </motion.div>
           </div>
         </div>
         <div className={`${styles.flexCenter} m-h-[400px] hidden md:flex`}>
@@ -48,7 +56,7 @@ const Hero: React.FC = () => {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

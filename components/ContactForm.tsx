@@ -32,7 +32,7 @@ const ContactForm: React.FC = () => {
       </h1>
       <div className="h-2 text-red-500"></div>
       <Input
-        label="ФИО"
+        label="Имя"
         type="text"
         name="fullName"
         register={register}
