@@ -32,7 +32,7 @@ html {
   }
 
   .svg-text {
-    @apply pointer-events-none absolute top-[-10%] left-[-10%] right-[-10%] bottom-[-10%] z-[-1] m-auto h-[104%] w-[105.5%] skew-x-[-20deg] overflow-hidden fill-none stroke-[54px] p-0;
+    @apply pointer-events-none absolute top-[-10%] left-[-10%] right-[-10%] bottom-[-10%] z-[-1] m-auto h-[104%] w-[105.5%] skew-x-[15deg] overflow-hidden fill-none stroke-[54px] p-0;
   }
   .active {
     @apply text-sky-500;

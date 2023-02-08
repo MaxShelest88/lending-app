@@ -11,13 +11,13 @@ interface Props {
 const Skills: React.FC<Props> = ({ categories }) => {
   return (
     <Section id="skills" title="Навыки / Skills">
-      <p className="mb-8 max-w-xl text-lg font-light ">
+      <p className="mb-8 max-w-xl text-lg font-light leading-6">
         Имею опыт работы c HTML, CSS, JavaScript, CSS-фреймворках (Tailwind
         CSS), библиотеке JavaScript React и инструментми разработки Git. Я
         использую эти технологии для создания высококачественных, отзывчивых и
         интерактивных веб-приложений.
       </p>
-      <div className="flex w-full gap-4 overflow-x-scroll py-5 px-2 scrollbar-hide">
+      <div className="flex w-full gap-4 overflow-x-scroll py-5 scrollbar-hide">
         {categories.map((category) => (
           <div
             key={category._id}
@@ -37,9 +37,12 @@ const Skills: React.FC<Props> = ({ categories }) => {
                   {`Мои навыки`}
                 </span>
               </p>
-              <div className="flex flex-wrap items-center space-x-2">
+              <div className="flex flex-wrap items-center">
                 {category.stacks.map((stack, index) => (
-                  <div key={index} className="flex items-center ">
+                  <div
+                    key={index}
+                    className="flex flex-[33.333%] items-center "
+                  >
                     <div className="flex items-center space-x-1">
                       <Image
                         src={urlFor(stack.mainImage).url()}

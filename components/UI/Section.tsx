@@ -9,7 +9,7 @@ interface Props {
 const Section: React.FC<Props> = ({ id, title, children }) => {
   return (
     <>
-      <section className="section relative py-20" id={id}>
+      <section className="section relative py-20 px-5" id={id}>
         <div className="container mx-auto">
           <h1 className="text-title mb-10">{title}</h1>
           {children}
