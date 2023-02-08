@@ -2,16 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+*,
+body,
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Eudoxus Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 
 @layer components {
   .section {
-    @apply w-screen lg:h-[calc(100vh+25px)];
+    @apply xl:min-h-screen;
   }
   .text-title {
     @apply bg-clip-text text-5xl font-bold text-transparent text-sky-500;

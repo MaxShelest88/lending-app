@@ -8,7 +8,7 @@ interface Props {
   categories: GeneralCategory[];
 }
 
-const Technologies: React.FC<Props> = ({ categories }) => {
+const Skills: React.FC<Props> = ({ categories }) => {
   return (
     <Section id="skills" title="Навыки / Skills">
       <p className="mb-8 max-w-xl text-lg font-light ">
@@ -61,4 +61,4 @@ const Technologies: React.FC<Props> = ({ categories }) => {
     </Section>
   );
 };
-export default Technologies;
+export default Skills;

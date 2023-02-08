@@ -2,13 +2,12 @@
 
 import styles from '@/styles';
 import { BsMouse } from 'react-icons/bs';
-import { Link } from 'react-scroll';
 
 const Hero: React.FC = () => {
   return (
-    <section className="section overflow-hidden pt-[60px]">
+    <section className="section overflow-hidden lg:h-[calc(100vh-60px)]">
       <div className="container relative mx-auto h-full md:grid md:grid-cols-2">
-        <div className="relative py-10 px-5 xl:py-[200px]">
+        <div className="relative pt-[80px] pr-5 xl:py-[200px]">
           <h1 className="text-title">
             <mark className="mark-text">
               <span className="span-text">Frontend</span>
@@ -41,21 +40,14 @@ const Hero: React.FC = () => {
         <div className={`${styles.flexCenter} m-h-[400px] hidden md:flex`}>
           <img
             src="/myfoto.jpg"
-            className="mr-[calc(-50vw+90%)] w-full max-w-[100vw] object-cover"
+            className="mr-[calc(-50vw+85%)] w-full max-w-[100vw] object-cover"
             alt="my foto"
           />
         </div>
         <div className="absolute bottom-2 left-0 z-10 hidden animate-bounce xl:block">
-          <Link
-            to="skills"
-            spy={true}
-            smooth={true}
-            offset={-5}
-            duration={500}
-            className="cursor-pointer"
-          >
+          <a href="#skills">
             <BsMouse className="h-9 w-9 text-black dark:text-white" />
-          </Link>
+          </a>
         </div>
       </div>
     </section>
