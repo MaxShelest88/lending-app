@@ -34,7 +34,7 @@ const Skills: React.FC<Props> = ({ categories }) => {
         </motion.p>
         <div className="flex w-full gap-4 overflow-x-scroll py-5 px-[2px] scrollbar-hide">
           {categories.map((category, index) => (
-            <SkillCard item={category} index={index} />
+            <SkillCard item={category} index={index} key={category._id} />
           ))}
         </div>
       </motion.div>

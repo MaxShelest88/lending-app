@@ -36,7 +36,7 @@ const Projects: React.FC<Props> = ({ projects }) => {
         </motion.p>
         <div className="flex w-full gap-3 overflow-x-scroll py-5 scrollbar-hide xl:grid xl:grid-cols-3 xl:gap-8 xl:space-x-0 xl:px-[2px]">
           {projects.map((project, index) => (
-            <ProjectCard item={project} index={index} />
+            <ProjectCard item={project} index={index} key={project._id} />
           ))}
         </div>
       </motion.div>

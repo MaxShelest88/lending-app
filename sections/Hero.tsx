@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
         <div className={`${styles.flexCenter} m-h-[400px] hidden md:flex`}>
           <img
             src="/myfoto.jpg"
-            className="mr-[calc(-50vw+85%)] w-full max-w-[100vw] object-cover"
+            className="mr-[calc(-50vw+75%)] w-full max-w-[100vw] object-cover"
             alt="my foto"
           />
         </div>
