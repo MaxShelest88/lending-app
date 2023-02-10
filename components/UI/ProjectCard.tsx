@@ -43,7 +43,7 @@ const ProjectCard: React.FC<PropsProjectCard> = ({ item, index }) => {
         <p className="self-start pt-3 pb-1 font-semibold">
           <span className="text-white-500">{`Tech Stack:`}</span>
         </p>
-        <div className="flex items-center space-x-2">
+        <div className="flex flex-wrap items-center space-x-2">
           {item.stacks.map((stack, i) => (
             <div key={i} className="flex items-center">
               <div className="flex items-center">
