@@ -14,11 +14,11 @@ const MENU_ITEMS = [
   { name: 'Контакты', id: 'contacts' },
 ];
 
-interface Props {
+interface HeaderProps {
   socialIcons: SocialIcon[];
 }
 
-function Header({ socialIcons }: Props) {
+const Header: React.FC<HeaderProps> = ({ socialIcons }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -80,5 +80,5 @@ function Header({ socialIcons }: Props) {
       </motion.div>
     </header>
   );
-}
+};
 export default Header;

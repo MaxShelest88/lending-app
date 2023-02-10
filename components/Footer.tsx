@@ -1,6 +1,6 @@
 'use client';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <>
       <footer className="text-zinc-800 dark:bg-neutral-800 dark:text-white">

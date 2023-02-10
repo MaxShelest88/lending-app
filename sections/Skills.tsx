@@ -18,7 +18,7 @@ const Skills: React.FC<Props> = ({ categories }) => {
         viewport={{ once: false, amount: 0.25 }}
       >
         <motion.h1
-          variants={fadeIn('right', 'spring', 0.2, 1)}
+          variants={fadeIn('right', 'spring', 0.2, 1.25)}
           className="text-title mb-10"
         >
           Навыки / Skills
