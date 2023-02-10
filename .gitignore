@@ -5,7 +5,7 @@
 /.pnp
 .pnp.js
 /.vscode
-/potfolio-cms
+/portfolio-cms
 
 # testing
 /coverage
