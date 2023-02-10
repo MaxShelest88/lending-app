@@ -29,7 +29,7 @@ const Contacts: React.FC<Props> = ({ socialIcons }) => {
           variants={fadeIn('up', 'spring', 0.5, 1.25)}
           className="grid md:grid-cols-2"
         >
-          <div className="space-y-5">
+          <div className="mb-2 space-y-5">
             {socialIcons.map((icon) => (
               <div className="flex space-x-3" key={icon._id}>
                 <p className="text-xl font-light">{icon.name}: </p>
