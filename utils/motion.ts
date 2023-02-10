@@ -19,6 +19,29 @@ export const navVariants = {
   },
 };
 
+export const fadeIn = (
+  direction: string,
+  type: string,
+  delay: number,
+  duration: number,
+) => ({
+  hidden: {
+    x: direction === 'left' ? 50 : direction === 'right' ? -50 : 0,
+    y: direction === 'up' ? 50 : direction === 'down' ? -50 : 0,
+    opacity: 0,
+  },
+  show: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    transition: {
+      type,
+      delay,
+      duration,
+    },
+  },
+});
+
 export const textVariant = (delay: number) => ({
   hidden: {
     x: -50,
@@ -31,6 +54,35 @@ export const textVariant = (delay: number) => ({
       type: 'spring',
       duration: 1.25,
       delay: delay * 0.2,
+    },
+  },
+});
+
+export const imageVariant = (delay: number) => ({
+  hidden: {
+    x: 0,
+    opacity: 0.3,
+  },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      duration: 1,
+      delay,
+    },
+  },
+});
+
+export const staggerContainer = (
+  staggerChildren: number,
+  delayChildren: number,
+) => ({
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren,
+      delayChildren,
     },
   },
 });
