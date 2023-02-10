@@ -40,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({ socialIcons }) => {
               : ''
           }`}
         />
-        <div className="container mx-auto flex h-[60px] px-0 xl:px-5">
+        <div className="container mx-auto flex h-[60px] px-5 md:px-0">
           <a
             href="/"
             className="relative z-50 flex items-center space-x-1 text-lg font-medium"
