@@ -28,7 +28,7 @@ const Skills: React.FC<Props> = ({ categories }) => {
           className="mb-8 max-w-xl text-lg font-light leading-6"
         >
           Имею опыт работы c HTML, CSS, JavaScript, CSS-фреймворках (Tailwind
-          CSS), библиотеке JavaScript React и инструментми разработки Git. Я
+          CSS), библиотекой JavaScript React и инструментами разработки Git. Я
           использую эти технологии для создания высококачественных, отзывчивых и
           интерактивных веб-приложений.
         </motion.p>
