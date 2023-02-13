@@ -13,7 +13,7 @@ const ProjectCard: React.FC<PropsProjectCard> = ({ item, index }) => {
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.3, 0.75)}
       key={item._id}
-      className="relative z-10 flex h-[350px] flex-[320px] flex-shrink-0 flex-col justify-between rounded-xl bg-white py-2 px-3 shadow-md dark:bg-slate-800"
+      className="relative z-10 flex h-[350px] flex-[300px] flex-shrink-0 flex-col justify-between rounded-xl bg-white py-2 px-3 shadow-md dark:bg-slate-800"
     >
       <h3 className={'text-white-500 pb-2 text-lg font-bold sm:text-xl'}>
         {item.title}

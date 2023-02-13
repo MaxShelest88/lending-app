@@ -32,7 +32,7 @@ const Skills: React.FC<Props> = ({ categories }) => {
           использую эти технологии для создания высококачественных, отзывчивых и
           интерактивных веб-приложений.
         </motion.p>
-        <div className="flex w-full gap-4 overflow-x-scroll py-5 px-[2px] scrollbar-hide">
+        <div className="flex w-full gap-3 overflow-x-scroll py-5 px-[2px] scrollbar-hide">
           {categories.map((category, index) => (
             <SkillCard item={category} index={index} key={category._id} />
           ))}

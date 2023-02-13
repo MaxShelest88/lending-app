@@ -15,7 +15,7 @@ const SkillCard: React.FC<PropsSkillCard> = ({ item, index }) => {
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.3, 0.75)}
       key={item._id}
-      className="flex flex-[320px] flex-shrink-0 flex-col justify-between rounded-xl bg-white py-2 px-3 shadow-md dark:bg-slate-800 xl:flex-[25%] xl:flex-shrink"
+      className="flex flex-[300px] flex-shrink-0 flex-col justify-between rounded-xl bg-white py-2 px-3 shadow-md dark:bg-slate-800 xl:flex-[25%] xl:flex-shrink"
     >
       <h3
         className={`text-${item.color}-500 pb-2 text-lg font-bold sm:text-xl`}
