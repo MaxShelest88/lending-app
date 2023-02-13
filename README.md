@@ -15,13 +15,12 @@ Backend:
 - sanity.io
 - nodemailer
 
-Code styling: 
+Code styling:
 
-- ESLint 
+- ESLint
 - Prettier
 - Husky
 
-
 # Links:
 
-[books-app](https://books-app-nine.vercel.app/)
+[portfolio](https://portfolio-6el0opaks-maxshelest88.vercel.app/)
