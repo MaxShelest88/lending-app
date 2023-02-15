@@ -50,7 +50,7 @@ const About = () => {
             </motion.div>
           </div>
           <motion.div
-            variants={opacityVariant(0.2)}
+            variants={opacityVariant(1.1)}
             className="mb-5 flex flex-auto items-center justify-center"
           >
             <div className="relative h-[360px] w-[360px] items-center justify-center overflow-hidden rounded-full sm:h-[450px] sm:w-[450px]">
