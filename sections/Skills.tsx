@@ -66,9 +66,6 @@ const Skills: React.FC<Props> = ({ categories }) => {
             758: {
               slidesPerView: 2,
             },
-            1024: {
-              slidesPerView: 3,
-            },
           }}
           onBeforeInit={(swiper) => {
             swiperRef.current = swiper;
