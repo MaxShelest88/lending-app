@@ -56,11 +56,11 @@ const Skills: React.FC<Props> = ({ categories }) => {
           slidesPerView={4}
           breakpoints={{
             // when window width is >= 480px
-            480: {
+            320: {
               slidesPerView: 1,
             },
-            // when window width is >= 640px
-            768: {
+            // when window width is >= 480px
+            480: {
               slidesPerView: 2,
             },
             1024: {
@@ -74,7 +74,6 @@ const Skills: React.FC<Props> = ({ categories }) => {
             el: '.custom-pagination',
             clickable: true,
           }}
-          className="px-2 pb-5"
         >
           {categories.map((category, index) => (
             <SwiperSlide key={category._id}>
