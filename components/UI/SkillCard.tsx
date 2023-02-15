@@ -27,7 +27,7 @@ const SkillCard: React.FC<PropsSkillCard> = ({ item, index }) => {
       </p>
       <div>
         <p className="self-start pt-3 pb-1 font-semibold">
-          <span className={`text${item.color}-500`}>{`Мои навыки`}</span>
+          <span className={`text${item.color}-500`}>Навыки:</span>
         </p>
         <div className="flex flex-wrap items-center">
           {item.stacks.map((stack, i) => (
