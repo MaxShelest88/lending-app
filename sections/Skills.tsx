@@ -61,10 +61,13 @@ const Skills: React.FC<Props> = ({ categories }) => {
             },
             // when window width is >= 480px
             480: {
+              slidesPerView: 1,
+            },
+            758: {
               slidesPerView: 2,
             },
             1024: {
-              slidesPerView: 4,
+              slidesPerView: 3,
             },
           }}
           onBeforeInit={(swiper) => {
