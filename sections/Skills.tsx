@@ -53,18 +53,16 @@ const Skills: React.FC<Props> = ({ categories }) => {
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={16}
-          slidesPerView={4}
+          slidesPerView={1}
           breakpoints={{
-            // when window width is >= 480px
-            320: {
-              slidesPerView: 1,
-            },
-            // when window width is >= 480px
-            480: {
-              slidesPerView: 1,
-            },
             758: {
               slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+            1280: {
+              slidesPerView: 4,
             },
           }}
           onBeforeInit={(swiper) => {
