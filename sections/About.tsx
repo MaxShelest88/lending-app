@@ -1,7 +1,7 @@
 'use client';
 
 import Section from '@/components/UI/Section';
-import { fadeIn, imageVariant, staggerContainer } from '@/utils/motion';
+import { fadeIn, opacityVariant, staggerContainer } from '@/utils/motion';
 import { motion } from 'framer-motion';
 
 const About = () => {
@@ -50,7 +50,7 @@ const About = () => {
             </motion.div>
           </div>
           <motion.div
-            variants={imageVariant(0.2)}
+            variants={opacityVariant(0.2)}
             className="mb-5 flex flex-auto items-center justify-center"
           >
             <div className="relative h-[360px] w-[360px] items-center justify-center overflow-hidden rounded-full sm:h-[450px] sm:w-[450px]">

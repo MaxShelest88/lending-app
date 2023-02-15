@@ -58,10 +58,10 @@ export const textVariant = (delay: number) => ({
   },
 });
 
-export const imageVariant = (delay: number) => ({
+export const opacityVariant = (delay: number) => ({
   hidden: {
     x: 0,
-    opacity: 0.3,
+    opacity: 0,
   },
   show: {
     x: 0,

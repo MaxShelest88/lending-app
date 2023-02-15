@@ -1,14 +1,21 @@
 'use client';
-
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Section, SkillCard } from '@/components/UI';
-import { fadeIn, staggerContainer } from '@/utils/motion';
+import { fadeIn, staggerContainer, opacityVariant } from '@/utils/motion';
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import type SwiperCore from 'swiper';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper';
+import 'swiper/swiper.min.css';
 
 interface Props {
   categories: GeneralCategory[];
 }
 
 const Skills: React.FC<Props> = ({ categories }) => {
+  const swiperRef = useRef<SwiperCore>();
   return (
     <Section id="skills">
       <motion.div
@@ -32,11 +39,53 @@ const Skills: React.FC<Props> = ({ categories }) => {
           использую эти технологии для создания высококачественных, отзывчивых и
           интерактивных веб-приложений.
         </motion.p>
-        <div className="flex w-full gap-3 overflow-x-scroll py-5 scrollbar-hide xl:grid xl:grid-cols-4 xl:gap-8 xl:px-[2px]">
+        <motion.div
+          variants={opacityVariant(1.31)}
+          className="mb-1 flex items-center justify-end gap-2"
+        >
+          <button onClick={() => swiperRef.current?.slidePrev()}>
+            <BsArrowLeft className="h-8 w-8 text-sky-500" />
+          </button>
+          <button onClick={() => swiperRef.current?.slideNext()}>
+            <BsArrowRight className="h-8 w-8 text-sky-500" />
+          </button>
+        </motion.div>
+        <Swiper
+          modules={[Navigation, Pagination]}
+          spaceBetween={16}
+          slidesPerView={4}
+          breakpoints={{
+            // when window width is >= 480px
+            480: {
+              slidesPerView: 1,
+            },
+            // when window width is >= 640px
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
+          onBeforeInit={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          pagination={{
+            el: '.custom-pagination',
+            clickable: true,
+          }}
+          className="px-2 pb-5"
+        >
           {categories.map((category, index) => (
-            <SkillCard item={category} index={index} key={category._id} />
+            <SwiperSlide key={category._id}>
+              <SkillCard item={category} index={index} />
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
+        <motion.div
+          variants={opacityVariant(1.34)}
+          className="custom-pagination flex items-center justify-center gap-1"
+        ></motion.div>
       </motion.div>
     </Section>
   );
