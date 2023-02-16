@@ -30,7 +30,6 @@ const ContactForm: React.FC = () => {
       <h1 className="text-2xl font-bold dark:text-gray-50">
         Связаться со мной
       </h1>
-      <div className="h-2 text-red-500"></div>
       <Input
         label="Имя"
         type="text"
