@@ -58,10 +58,10 @@ export const textVariant = (delay: number) => ({
   },
 });
 
-export const opacityVariant = (delay: number) => ({
+export const opacityVariant = (delay: number, startOpacity: number) => ({
   hidden: {
     x: 0,
-    opacity: 0,
+    opacity: startOpacity,
   },
   show: {
     x: 0,

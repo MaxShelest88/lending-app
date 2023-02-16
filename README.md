@@ -23,4 +23,4 @@ Code styling:
 
 # Links:
 
-[portfolio](https://portfolio-6el0opaks-maxshelest88.vercel.app/)
+[portfolio](https://portfolio-maxshelest88.vercel.app/)

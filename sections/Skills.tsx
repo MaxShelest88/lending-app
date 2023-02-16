@@ -40,7 +40,7 @@ const Skills: React.FC<Props> = ({ categories }) => {
           интерактивных веб-приложений.
         </motion.p>
         <motion.div
-          variants={opacityVariant(1.31)}
+          variants={opacityVariant(1.31, 0)}
           className="mb-1 flex items-center justify-end gap-2"
         >
           <button onClick={() => swiperRef.current?.slidePrev()}>
@@ -80,7 +80,7 @@ const Skills: React.FC<Props> = ({ categories }) => {
           ))}
         </Swiper>
         <motion.div
-          variants={opacityVariant(1.34)}
+          variants={opacityVariant(1.31, 0)}
           className="custom-pagination flex items-center justify-center gap-1"
         ></motion.div>
       </motion.div>
