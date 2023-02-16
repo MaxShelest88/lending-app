@@ -5,66 +5,66 @@
 *,
 body,
 html {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Eudoxus Sans", sans-serif;
-	scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Eudoxus Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .swiper-slide {
-	height: auto !important;
+  height: auto !important;
 }
 
 .swiper {
-	padding: 4px !important;
-	margin-bottom: 16px !important;
+  padding: 4px !important;
+  margin-bottom: 16px !important;
 }
 
 .custom-pagination {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .swiper-pagination-bullet {
-	transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-	border-radius: 50%;
-	display: block;
-	width: 8px;
-	height: 8px;
-	background: rgb(56 189 248);
-	opacity: 0.3;
-	cursor: pointer;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  border-radius: 50%;
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: rgb(56 189 248);
+  opacity: 0.3;
+  cursor: pointer;
 }
 
 .swiper-pagination-bullet-active {
-	background: #0ea5e9;
-	opacity: 1;
+  background: #0ea5e9;
+  opacity: 1;
 }
 
 @layer components {
-	.section {
-		@apply xl:min-h-screen;
-	}
-	.text-title {
-		@apply bg-clip-text text-5xl font-bold text-transparent text-sky-500;
-	}
-	.button {
-		@apply mt-8 inline-flex max-w-xs flex-row items-center rounded-md bg-sky-500 py-2 px-5 text-center text-lg font-light text-white transition-all hover:bg-sky-400;
-	}
+  .section {
+    @apply xl:min-h-screen;
+  }
+  .text-title {
+    @apply bg-clip-text text-5xl font-bold text-transparent text-sky-500;
+  }
+  .button {
+    @apply mt-8 inline-flex max-w-xs flex-row items-center rounded-md bg-sky-500 py-2 px-5 text-center text-lg font-light text-white transition-all hover:bg-sky-400;
+  }
 
-	.mark-text {
-		@apply relative m-0 inline-block whitespace-nowrap bg-transparent p-0 text-5xl font-bold leading-[normal] text-white no-underline outline-none;
-	}
+  .mark-text {
+    @apply relative m-0 inline-block whitespace-nowrap bg-transparent p-0 text-5xl font-bold leading-[normal] text-white no-underline outline-none;
+  }
 
-	.span-text {
-		@apply pointer-events-none relative z-[1] inline-block px-[0.1em] py-0;
-	}
+  .span-text {
+    @apply pointer-events-none relative z-[1] inline-block px-[0.1em] py-0;
+  }
 
-	.svg-text {
-		@apply pointer-events-none absolute top-[-10%] left-[-10%] right-[-10%] bottom-[-10%] z-[-1] m-auto h-[104%] w-[105.5%] skew-x-[15deg] overflow-hidden fill-none stroke-[54px] p-0;
-	}
-	.active {
-		@apply text-sky-500;
-	}
+  .svg-text {
+    @apply pointer-events-none absolute top-[-10%] left-[-10%] right-[-10%] bottom-[-10%] z-[-1] m-auto h-[104%] w-[105.5%] skew-x-[15deg] overflow-hidden fill-none stroke-[54px] p-0;
+  }
+  .active {
+    @apply text-sky-500;
+  }
 }
