@@ -13,14 +13,14 @@ const ProjectCard: React.FC<PropsProjectCard> = ({ item, index }) => {
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.3, 0.75)}
       key={item._id}
-      className="relative z-10 flex flex-[300px] flex-shrink-0 flex-col rounded-xl bg-white py-2 px-3 shadow-md dark:bg-slate-800"
+      className="relative z-10 flex flex-[400px] flex-shrink-0 flex-col rounded-xl bg-white py-2 px-3 shadow-md dark:bg-slate-800"
     >
       <h3 className={'text-white-500 pb-2 text-lg font-bold sm:text-xl'}>
         {item.title}
       </h3>
       <a
         href={item.url}
-        className="relative h-[200px] flex-shrink-0 overflow-hidden"
+        className="relative h-[250px] flex-shrink-0 overflow-hidden"
       >
         <Image
           src={urlFor(item.mainImage).url()}
