@@ -31,6 +31,7 @@ interface Project {
   _id: string;
   title: string;
   url: string;
+  description: string;
   difficulty: number;
   mainImage: Image;
   stacks: Stack[];
