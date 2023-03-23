@@ -42,7 +42,7 @@ const ProjectCard: React.FC<PropsProjectCard> = ({ item, index }) => {
           ? 'Экспрерт'
           : 'Мастер'}
       </p>
-      <p className="flex-auto">{item.description}</p>
+      <p className="flex-auto text-justify text-base">{item.description}</p>
       <div>
         <p className="self-start pt-3 pb-1 font-semibold">
           <span className="text-white-500">{`Tech Stack:`}</span>
