@@ -13,12 +13,15 @@ const ProjectCard: React.FC<PropsProjectCard> = ({ item, index }) => {
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.3, 0.75)}
       key={item._id}
-      className="relative z-10 flex h-[350px] flex-[300px] flex-shrink-0 flex-col justify-between rounded-xl bg-white py-2 px-3 shadow-md dark:bg-slate-800"
+      className="relative z-10 flex flex-[300px] flex-shrink-0 flex-col rounded-xl bg-white py-2 px-3 shadow-md dark:bg-slate-800"
     >
       <h3 className={'text-white-500 pb-2 text-lg font-bold sm:text-xl'}>
         {item.title}
       </h3>
-      <a href={item.url} className="relative flex-auto overflow-hidden">
+      <a
+        href={item.url}
+        className="relative h-[200px] flex-shrink-0 overflow-hidden"
+      >
         <Image
           src={urlFor(item.mainImage).url()}
           alt={item.title}
@@ -39,7 +42,7 @@ const ProjectCard: React.FC<PropsProjectCard> = ({ item, index }) => {
           ? 'Экспрерт'
           : 'Мастер'}
       </p>
-      <p>{item.description}</p>
+      <p className="flex-auto">{item.description}</p>
       <div>
         <p className="self-start pt-3 pb-1 font-semibold">
           <span className="text-white-500">{`Tech Stack:`}</span>
