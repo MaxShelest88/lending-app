@@ -10,7 +10,7 @@ const Page = async () => {
 
   const projects = await fetchFromSanity<Project[]>(
     `*[_type=="Project"]{
-  _id, title, url, difficulty, mainImage, stacks[] ->
+  _id, title, url, difficulty, description, mainImage, stacks[] ->
    {_id, mainImage, skill, title}
 }`,
   );
