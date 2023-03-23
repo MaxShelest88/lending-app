@@ -30,17 +30,17 @@ const Header: React.FC<HeaderProps> = ({ socialIcons }) => {
   }, []);
 
   return (
-    <header className="fixed top-0 z-50 mx-auto w-full text-zinc-800 dark:text-white">
+    <header className="fixed top-0 z-50 w-full px-5 text-zinc-800 dark:text-white">
       <motion.div variants={navVariants} initial="hidden" whileInView="show">
         <div
           id="navigation-background"
-          className={`absolute h-[60px] w-full bg-transparent transition-all  duration-500  ${
+          className={`absolute mx-[-20px] h-[60px] w-full bg-transparent transition-all  duration-500  ${
             scrolled
               ? 'bg-slate-200/80 backdrop-blur-[8px] dark:bg-neutral-800/80'
               : ''
           }`}
         />
-        <div className="container mx-auto flex h-[60px] px-5">
+        <div className="container mx-auto flex h-[60px]">
           <a
             href="/"
             className="relative z-50 flex items-center space-x-1 text-lg font-medium"

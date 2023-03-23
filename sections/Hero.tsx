@@ -9,10 +9,10 @@ const Hero: React.FC = () => {
     <motion.section
       initial="hidden"
       whileInView="show"
-      className="section relative overflow-hidden xl:h-[calc(100vh-60px)]"
+      className="section relative overflow-hidden px-5 xl:h-[calc(100vh-60px)]"
     >
       <div className="container relative mx-auto h-full md:grid md:grid-cols-2">
-        <div className="relative overflow-hidden px-5 pt-[80px] xl:py-[200px]">
+        <div className="relative overflow-hidden pt-[80px] xl:py-[200px]">
           <div className="relative z-20">
             <motion.div variants={fadeIn('right', 'spring', 0.5, 1.25)}>
               <h1 className="text-title">
