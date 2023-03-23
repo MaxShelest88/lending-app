@@ -33,14 +33,14 @@ const ProjectCard: React.FC<PropsProjectCard> = ({ item, index }) => {
       <p className="py-1 text-sm italic text-gray-500">
         Уровень:{' '}
         {item.difficulty === 1
-          ? 'Начальный'
+          ? 'начальный'
           : item.difficulty === 2
-          ? 'Продвинутый'
+          ? 'средний'
           : item.difficulty === 3
-          ? 'Средний'
+          ? 'выше среднего'
           : item.difficulty === 4
-          ? 'Экспрерт'
-          : 'Мастер'}
+          ? 'провинутый'
+          : 'профессиональный'}
       </p>
       <p className="flex-auto text-justify text-base">{item.description}</p>
       <div>
