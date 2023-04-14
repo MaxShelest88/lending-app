@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import { Footer, Header, Providers } from '@/components';
 import { fetchFromSanity } from '@/utils/fetchFromSanity';
+import { Analytics } from '@vercel/analytics/react';
 
 export default async function RootLayout({
   children,
@@ -22,6 +23,7 @@ export default async function RootLayout({
           </main>
           <Footer />
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
