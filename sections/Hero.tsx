@@ -45,9 +45,9 @@ const Hero: React.FC = () => {
               <a className="button" href="#contacts">
                 Связаться со мной
               </a>
-              <a className="button" href="resume.pdf">
+              {/* <a className="button" href="resume.pdf">
                 Скачать резюме
-              </a>
+              </a> */}
             </motion.div>
           </div>
         </div>
